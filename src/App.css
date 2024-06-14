@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.resume-container {
+  width: 80%;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header {
+  text-align: center;
+  background: #009879;
+  color: white;
+  padding: 20px 0;
+}
+
+.resume-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.resume-header h2 {
+  margin: 5px 0 0 0;
+  font-size: 1.2em;
+  color: #cccccc;
+}
+
+.resume-content {
+  display: flex;
+  margin-top: 20px;
+}
+
+.resume-sidebar {
+  width: 25%;
+  padding: 20px;
+  background: #e0f7fa;
+  color: #333;
+}
+
+.contact-info, .skills, .languages {
+  margin-bottom: 20px;
+}
+
+.skills ul, .languages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-main {
+  width: 75%;
+  padding: 20px;
+}
+
+.resume-main section {
+  margin-bottom: 20px;
+}
+
+.resume-main h3 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #009879;
+  padding-bottom: 5px;
+}
+
+.resume-main .job, .education, .accomplishments {
+  margin-bottom: 20px;
+}
+
+.resume-main .job h4, .education h4, .accomplishments h4 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.resume-main .job p, .education p, .accomplishments p {
+  margin: 5px 0;
+}
