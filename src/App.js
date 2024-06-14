@@ -5,8 +5,11 @@ const Resume = () => {
   return (
     <div className="resume-container">
       <header className="resume-header">
-        <h1>Anjali Gurjar</h1>
-        <h2>Software Developer</h2>
+        <img src="/profileimage.jpeg" alt="Profile" className="profile-pic" />
+        <div>
+          <h1>Anjali Gurjar</h1>
+          <h2>Software Developer</h2>
+        </div>
       </header>
       <div className="resume-content">
         <aside className="resume-sidebar">
@@ -18,21 +21,84 @@ const Resume = () => {
           </div>
           <div className="skills">
             <h3>Key Skills</h3>
-            <ul>
-              <li>Detail Oriented</li>
-              <li>PL/pgSQL</li>
-              <li>PostgreSQL</li>
-              <li>SQL Tools</li>
-              <li>Microsoft SQL Server</li>
-              <li>Backup & Recovery Systems</li>
-              <li>Troubleshooting</li>
-              <li>IBM Tivoli Storage Manager (TSM)</li>
-              <li>NodeJS</li>
-              <li>ExpressJS</li>
-              <li>Git</li>
-              <li>MySQL</li>
-              <li>AWS (Basic)</li>
-            </ul>
+            <div className="skill">
+              <p>Detail Oriented</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "90%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>PL/pgSQL</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "85%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>PostgreSQL</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "80%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>SQL Tools</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "75%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>Microsoft SQL Server</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "70%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>Backup & Recovery Systems</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "85%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>Troubleshooting</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "80%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>IBM Tivoli Storage Manager (TSM)</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "65%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>NodeJS</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "75%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>ExpressJS</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "70%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>Git</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "80%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>MySQL</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "75%" }}></div>
+              </div>
+            </div>
+            <div className="skill">
+              <p>AWS (Basic)</p>
+              <div className="skill-bar">
+                <div className="skill-level" style={{ width: "50%" }}></div>
+              </div>
+            </div>
           </div>
           <div className="languages">
             <h3>Languages</h3>

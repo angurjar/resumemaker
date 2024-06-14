@@ -19,6 +19,16 @@ body {
   background: #009879;
   color: white;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
 
 .resume-header h1 {
@@ -51,6 +61,21 @@ body {
 .skills ul, .languages ul {
   list-style: none;
   padding: 0;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-level {
+  background: #009879;
+  height: 10px;
 }
 
 .resume-main {
