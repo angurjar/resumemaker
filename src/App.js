@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
-import { saveAs } from "file-saver";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import "./App.css"; // Ensure to create a corresponding CSS file for styling
@@ -214,3 +213,4 @@ const Resume = () => {
 };
 
 export default Resume;
+
