@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
+import { saveAs } from "file-saver";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 import "./App.css"; // Ensure to create a corresponding CSS file for styling
 
 const Resume = () => {
+  const resumeRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => resumeRef.current,
+  });
+
+  const handleDownload = () => {
+    html2canvas(resumeRef.current).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF();
+      pdf.addImage(imgData, "PNG", 0, 0);
+      pdf.save("resume.pdf");
+    });
+  };
+
   return (
     <div className="resume-container">
       <header className="resume-header">
@@ -11,7 +30,7 @@ const Resume = () => {
           <h2>Software Developer</h2>
         </div>
       </header>
-      <div className="resume-content">
+      <div className="resume-content" ref={resumeRef}>
         <aside className="resume-sidebar">
           <div className="contact-info">
             <p>Sector 51, Noida(UP), India</p>
@@ -64,12 +83,6 @@ const Resume = () => {
               </div>
             </div>
             <div className="skill">
-              <p>IBM Tivoli Storage Manager (TSM)</p>
-              <div className="skill-bar">
-                <div className="skill-level" style={{ width: "65%" }}></div>
-              </div>
-            </div>
-            <div className="skill">
               <p>NodeJS</p>
               <div className="skill-bar">
                 <div className="skill-level" style={{ width: "75%" }}></div>
@@ -85,12 +98,6 @@ const Resume = () => {
               <p>Git</p>
               <div className="skill-bar">
                 <div className="skill-level" style={{ width: "80%" }}></div>
-              </div>
-            </div>
-            <div className="skill">
-              <p>MySQL</p>
-              <div className="skill-bar">
-                <div className="skill-level" style={{ width: "75%" }}></div>
               </div>
             </div>
             <div className="skill">
@@ -197,6 +204,10 @@ const Resume = () => {
             </p>
           </section>
         </main>
+      </div>
+      <div className="resume-actions">
+        <button onClick={handlePrint}>Print Resume</button>
+        <button onClick={handleDownload}>Download Resume</button>
       </div>
     </div>
   );
